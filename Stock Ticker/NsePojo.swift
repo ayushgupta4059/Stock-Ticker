@@ -1,0 +1,58 @@
+/*
+ Copyright (c) 2019 Swift Models Generated from JSON powered by http://www.json4swift.com
+ 
+ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+ 
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ 
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ 
+ For support, please feel free to contact me at https://www.linkedin.com/in/syedabsar
+ 
+ */
+
+import Foundation
+struct NsePojo : Codable {
+    let preClose : Int?
+    let code : Int?
+    let data : [Data]?
+    let mktOpen : Int?
+    let corrClose : Int?
+    let preOpen : Int?
+    let corrOpen : Int?
+    let haltedStatus : String?
+    let time : String?
+    let mktClose : Int?
+    let status : String?
+    
+    enum CodingKeys: String, CodingKey {
+        
+        case preClose = "preClose"
+        case code = "code"
+        case data = "data"
+        case mktOpen = "mktOpen"
+        case corrClose = "corrClose"
+        case preOpen = "preOpen"
+        case corrOpen = "corrOpen"
+        case haltedStatus = "haltedStatus"
+        case time = "time"
+        case mktClose = "mktClose"
+        case status = "status"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        preClose = try values.decodeIfPresent(Int.self, forKey: .preClose)
+        code = try values.decodeIfPresent(Int.self, forKey: .code)
+        data = try values.decodeIfPresent([Data].self, forKey: .data)
+        mktOpen = try values.decodeIfPresent(Int.self, forKey: .mktOpen)
+        corrClose = try values.decodeIfPresent(Int.self, forKey: .corrClose)
+        preOpen = try values.decodeIfPresent(Int.self, forKey: .preOpen)
+        corrOpen = try values.decodeIfPresent(Int.self, forKey: .corrOpen)
+        haltedStatus = try values.decodeIfPresent(String.self, forKey: .haltedStatus)
+        time = try values.decodeIfPresent(String.self, forKey: .time)
+        mktClose = try values.decodeIfPresent(Int.self, forKey: .mktClose)
+        status = try values.decodeIfPresent(String.self, forKey: .status)
+    }
+    
+}

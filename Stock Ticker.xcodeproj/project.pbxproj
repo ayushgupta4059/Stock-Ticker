@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A2AB36C22D886220063F83F /* NsePojo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2AB36B22D886220063F83F /* NsePojo.swift */; };
 		2A50742622D86787002325AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50742522D86787002325AC /* AppDelegate.swift */; };
 		2A50742822D86787002325AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A50742722D86787002325AC /* ViewController.swift */; };
 		2A50742A22D86787002325AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A50742922D86787002325AC /* Assets.xcassets */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A2AB36B22D886220063F83F /* NsePojo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NsePojo.swift; sourceTree = "<group>"; };
+		2A2AB36D22D8915D0063F83F /* Stock Ticker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Stock Ticker.entitlements"; sourceTree = "<group>"; };
 		2A50742222D86787002325AC /* Stock Ticker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stock Ticker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A50742522D86787002325AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A50742722D86787002325AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,12 +99,14 @@
 		2A50742422D86787002325AC /* Stock Ticker */ = {
 			isa = PBXGroup;
 			children = (
+				2A2AB36D22D8915D0063F83F /* Stock Ticker.entitlements */,
 				2A50742522D86787002325AC /* AppDelegate.swift */,
 				2A50742722D86787002325AC /* ViewController.swift */,
 				2A50742922D86787002325AC /* Assets.xcassets */,
 				2A50742B22D86787002325AC /* Main.storyboard */,
 				2A50742E22D86787002325AC /* Info.plist */,
 				2A50742F22D86787002325AC /* Stock_Ticker.entitlements */,
+				2A2AB36B22D886220063F83F /* NsePojo.swift */,
 			);
 			path = "Stock Ticker";
 			sourceTree = "<group>";
@@ -193,6 +198,11 @@
 					2A50742122D86787002325AC = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					2A50743322D86787002325AC = {
 						CreatedOnToolsVersion = 9.2;
@@ -257,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A2AB36C22D886220063F83F /* NsePojo.swift in Sources */,
 				2A50742822D86787002325AC /* ViewController.swift in Sources */,
 				2A50742622D86787002325AC /* AppDelegate.swift in Sources */,
 			);
@@ -415,7 +426,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Stock Ticker/Stock_Ticker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Stock Ticker/Info.plist";
@@ -430,7 +440,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Stock Ticker/Stock_Ticker.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Stock Ticker/Info.plist";
